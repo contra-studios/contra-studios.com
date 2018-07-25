@@ -6,6 +6,15 @@
   </div>
 </template>
 
+<script>
+  import Greeting from '~/components/greeting.vue'
+
+  export default {
+    components: {
+      Greeting
+    }
+  }
+</script>
 
 <style>
   @font-face {
