@@ -1,0 +1,24 @@
+/* Global
+   Global helpers such as globally applied styles and containers.
+
+*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection { background: $brand-secondary; }
+::selection { background: $brand-secondary; }
+
+html {
+  @include font-feature-settings('liga');
+
+ -moz-osx-font-smoothing: grayscale;
+ -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: $brand-black;
+  font-family: $pre-avenir-next;
+  font-size: $base-font-size;
+  font-weight: $normal-weight;
+  line-height: $base-line-height;
+}
