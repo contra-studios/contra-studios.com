@@ -26,7 +26,7 @@
   }
 
   .top-nav {
-    width: 60%;
+    width: 100%;
     display: inline-block;
     text-align: right;
   }
