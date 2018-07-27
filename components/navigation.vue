@@ -26,7 +26,7 @@
   }
 
   .top-nav {
-    width: 60%;
+    width: 100%;
     display: inline-block;
     text-align: right;
   }
@@ -37,7 +37,7 @@
 
   .menu li {
     display: inline-block;
-    margin-left: 3em;
+    margin-left: 5em;
     font-size: .7em;
     text-transform: uppercase;
   }
