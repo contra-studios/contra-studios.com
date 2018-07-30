@@ -7,9 +7,9 @@
       <div class="foreground">
         <div class="page-bar wrapper">
           <!-- <a href="/" class="person-name">Contra Studios</a> -->
-          <a class="logoWrapper" href="/">
+          <!-- <a class="logoWrapper" href="/">
             <img class="siteLogo" src="../assets/images/logo.svg">
-          </a>
+          </a> -->
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
@@ -106,16 +106,6 @@ export default {
   max-height: 510px;
   background: #fff;
   color: #2c2c2c;
-}
-
-.logoWrapper{
-  width: 40%;
-  display: inline-block;
-}
-
-.siteLogo {
-  width: 60%;
-/*  display: inline-block;*/
 }
 
 .home .person-name:link,
