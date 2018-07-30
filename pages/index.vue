@@ -17,7 +17,8 @@
       </div>
     </header>
 
-    <!-- <CaseStudy></CaseStudy> -->
+    <CaseStudy></CaseStudy>
+    <br> <!-- Added to show separation while building -->
     <section class="caseStudyContainer">
       <div class="items-bar wrapper">
         <h3>Case Studies</h3>
