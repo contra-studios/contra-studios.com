@@ -6,10 +6,6 @@
       </div> -->
       <div class="foreground">
         <div class="page-bar wrapper">
-          <!-- <a href="/" class="person-name">Contra Studios</a> -->
-          <!-- <a class="logoWrapper" href="/">
-            <img class="siteLogo" src="../assets/images/logo.svg">
-          </a> -->
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
@@ -49,18 +45,7 @@
       </div>
     </section>
 
-    <section class="footer">
-      <div class="wrapper">
-        <h4>Contra Studios</h4>
-          <ul class="footerList">
-            <li><a href="/">About</a></li><span>&#124;</span>
-            <li><a href="/">Menu</a></li><span>&#124;</span>
-            <li><a href="/">Reservation</a></li><span>&#124;</span>
-            <li><a href="/">Functions</a></li><span>&#124;</span>
-            <li><a href="/">Contact</a></li>
-          </ul>
-      </div>
-    </section>
+    <Footer></Footer>
   </div>
 
 </template>
@@ -68,6 +53,7 @@
 <script>
 import {createClient} from '~/plugins/contentful.js'
 import Navigation from '~/components/navigation.vue'
+import Footer from '~/components/footer.vue'
 import ArticlePreview from '~/components/article-preview.vue'
 
 const client = createClient()
@@ -91,6 +77,7 @@ export default {
   },
   components: {
     Navigation,
+    Footer,
     ArticlePreview
   }
 }
@@ -105,11 +92,6 @@ export default {
   min-height: 400px;
   max-height: 510px;
   background: #fff;
-  color: #2c2c2c;
-}
-
-.home .person-name:link,
-.home .person-name:visited {
   color: #2c2c2c;
 }
 
@@ -205,45 +187,6 @@ export default {
   font-size: .7em;
 }
 
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  background-color: #857b7a; /*This color Needs to be matched to scheme*/
-}
-
-.footer h4 {
-  text-align: left;
-  font-size: 1.4em;
-  padding-bottom: 35px;
-}
-
-.footerList{
-  list-style: none;
-  width: 100%;
-  height: 90px;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.footerList > li {
-  display: inline-block;
-  height: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.footerList a:link,
-.footerList a:visited {
-  color: white;
-  text-transform: uppercase; 
-  text-decoration: none;
-}
 
 /*.picture {
   position: absolute;
