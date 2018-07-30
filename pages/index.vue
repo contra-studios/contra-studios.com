@@ -1,15 +1,8 @@
 <template>
   <div>
     <header class="home header">
-<!--  BACKGROUND IMAGE SAMPLE      <div class="picture">
-        <img :src="person.fields.image.fields.file.url + '?w=1200'">
-      </div> -->
       <div class="foreground">
         <div class="page-bar wrapper">
-          <!-- <a href="/" class="person-name">Contra Studios</a> -->
-          <a class="logoWrapper" href="/">
-            <img class="siteLogo" src="../assets/images/logo.svg">
-          </a>
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
@@ -24,6 +17,7 @@
       </div>
     </header>
 
+    <!-- <CaseStudy></CaseStudy> -->
     <section class="caseStudyContainer">
       <div class="items-bar wrapper">
         <h3>Case Studies</h3>
@@ -35,32 +29,10 @@
       </ul>
     </section>
 
-    <section class="processHighlightContainer">
-      <div class="process-bar wrapper">
-        <h3>Process Highlight</h3>
-      </div>
-    </section>
+    <ProcessHighlight></ProcessHighlight>
+    <AboutUs></AboutUs>
+    <Footer></Footer>
 
-    <section class="aboutUsContainer">
-      <div class="about-bar wrapper">
-        <h3>About Us</h3>
-
-        <a id ="bookTableButton" href="/">Book a Table</a>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="wrapper">
-        <h4>Contra Studios</h4>
-          <ul class="footerList">
-            <li><a href="/">About</a></li><span>&#124;</span>
-            <li><a href="/">Menu</a></li><span>&#124;</span>
-            <li><a href="/">Reservation</a></li><span>&#124;</span>
-            <li><a href="/">Functions</a></li><span>&#124;</span>
-            <li><a href="/">Contact</a></li>
-          </ul>
-      </div>
-    </section>
   </div>
 
 </template>
@@ -68,6 +40,10 @@
 <script>
 import {createClient} from '~/plugins/contentful.js'
 import Navigation from '~/components/navigation.vue'
+import CaseStudy from '~/components/case-study-home.vue'
+import ProcessHighlight from '~/components/process-highlight.vue'
+import AboutUs from '~/components/about-us.vue'
+import Footer from '~/components/footer.vue'
 import ArticlePreview from '~/components/article-preview.vue'
 
 const client = createClient()
@@ -91,6 +67,10 @@ export default {
   },
   components: {
     Navigation,
+    CaseStudy,
+    ProcessHighlight,
+    AboutUs,
+    Footer,
     ArticlePreview
   }
 }
@@ -105,21 +85,6 @@ export default {
   min-height: 400px;
   max-height: 510px;
   background: #fff;
-  color: #2c2c2c;
-}
-
-.logoWrapper{
-  width: 40%;
-  display: inline-block;
-}
-
-.siteLogo {
-  width: 60%;
-/*  display: inline-block;*/
-}
-
-.home .person-name:link,
-.home .person-name:visited {
   color: #2c2c2c;
 }
 
@@ -175,24 +140,8 @@ export default {
   background: #EBECE9;
 }
 
-.processHighlightContainer {
-  background: #fff; 
-}
-
-.aboutUsContainer {
-  background: #EBECE9;
-}
-
 .items-bar h3 {
   padding-top: 25px;
-}
-
-.process-bar h3 {
-  text-align: right;
-}
-
-.about-bar h3 {
-  text-align: left;
 }
 
 .wrapper h3{
@@ -200,70 +149,6 @@ export default {
   text-transform: uppercase;
   padding-bottom: 25px;
 }
-
-#bookTableButton {
-  border-color: #BD8936;
-  color: white;
-  background-color: #BD8936;
-  margin-right: 25px;
-  border: 1px solid;
-  padding: 10px 20px;
-  box-shadow: 10px 5px 20px #D7D9D3;
-  text-transform: uppercase;
-  display: inline-block;
-  text-decoration: none;
-  font-size: .7em;
-}
-
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  background-color: #857b7a; /*This color Needs to be matched to scheme*/
-}
-
-.footer h4 {
-  text-align: left;
-  font-size: 1.4em;
-  padding-bottom: 35px;
-}
-
-.footerList{
-  list-style: none;
-  width: 100%;
-  height: 90px;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.footerList > li {
-  display: inline-block;
-  height: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.footerList a:link,
-.footerList a:visited {
-  color: white;
-  text-transform: uppercase; 
-  text-decoration: none;
-}
-
-/*.picture {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  left: 0%;
-  right: 0;
-  width: 150%;
-}*/
 
 @media all and (min-width: 600px) {
   .picture {

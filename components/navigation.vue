@@ -1,9 +1,13 @@
 <template>
+
+
   <nav role="navigation" class="top-nav">
+    
+
     <ul class="menu">
-     <!--  <li v-if="!/\/.*?\/.*/.test(route.path)" v-for="route in this.$router.options.routes">
-        <nuxt-link :to="{ name: route.name }">{{ route.name.charAt(0).toUpperCase() + route.name.slice(1) }}</nuxt-link>
-      </li> -->
+      <a class="logoWrapper" href="/">
+        <img class="siteLogo" src="../assets/images/logo.svg">
+      </a>
 
       <li><a href="/">Work</a></li>
       <li><a href="/">Our Process</a></li>
@@ -26,9 +30,19 @@
   }
 
   .top-nav {
-    width: 60%;
+    width: 100%;
     display: inline-block;
     text-align: right;
+  }
+
+  .menu .logoWrapper{
+    float: left;
+    width: 40%;
+    display: inline-block;
+  }
+
+  .menu .siteLogo {
+    width: 60%;
   }
 
   .menu {
