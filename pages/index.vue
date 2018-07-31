@@ -28,6 +28,21 @@
           <article-preview :post="post"></article-preview>
         </li>
       </ul>
+
+<!--     <ul class="items-list wrapper">
+      <li v-for="caseStudy in cases">
+        <h4>{{caseStudy.fields.title}}</h4>
+        <h5>{{caseStudy.fields.client.fields.name}}</h5>
+        <ul>
+          <li v-for="teamMember in caseStudy.fields.teamMembers">
+            <h5>{{teamMember.fields.name}}</h5>
+          </li>
+        </ul>
+        <br>
+      </li>
+    </ul> -->
+
+
     </section>
 
     <ProcessHighlight></ProcessHighlight>
@@ -58,11 +73,16 @@ export default {
       client.getEntries({
         'content_type': env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt'
+      }),
+      client.getEntries({
+        'content_type': env.CTF_CASE_STUDY_TYPE_ID,
+        order: '-sys.createdAt'
       })
-    ]).then(([entries, posts]) => {
+    ]).then(([entries, posts, cases]) => {
       return {
         person: entries.items[0],
-        posts: posts.items
+        posts: posts.items,
+        cases: cases.items
       }
     }).catch(console.error)
   },
