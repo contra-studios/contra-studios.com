@@ -17,7 +17,7 @@
       </div>
     </header>
 
-    <CaseStudy></CaseStudy>
+    <CaseStudy v-bind:cases="cases"></CaseStudy>
     <br> <!-- Added to show separation while building -->
     <section class="caseStudyContainer">
       <div class="items-bar wrapper">

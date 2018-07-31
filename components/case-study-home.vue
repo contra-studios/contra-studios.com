@@ -19,7 +19,11 @@
 
 </template>
 
-<script type="text/JavaScript">
+<script>
+	export default {props: ['cases']}
+</script>
+
+<!-- <script type="text/JavaScript">
 	import {createClient} from '~/plugins/contentful.js'
 
 	const client = createClient()
@@ -42,7 +46,7 @@
 	  }
 }
 
-</script>
+</script> -->
 
 
 <style>
