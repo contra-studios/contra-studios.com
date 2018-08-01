@@ -4,9 +4,13 @@
       <h3>Case Studies</h3>
     </div>
 		<ul class="items-list wrapper">
-      <li v-for="caseStudy in cases">
-        <h4>{{caseStudy.fields.title}}</h4>
-        <h5>{{caseStudy.fields.client.fields.name}}</h5>
+      <li class="item" v-for="caseStudy in cases">
+        <h1>{{caseStudy.fields.title}}</h1>
+        <p>{{caseStudy.fields.description}}</p>
+        <img class="thumbnail"
+      	:src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=350&h=196'"
+    		>
+        <h4>{{caseStudy.fields.client.fields.name}}</h4>
         <ul>
           <li v-for="teamMember in caseStudy.fields.teamMembers">
             <h5>{{teamMember.fields.name}}</h5>
@@ -55,8 +59,31 @@
   background: #EBECE9;
 }
 
-/*.items-bar h3 {
-  padding-top: 25px;
-}*/
+.items-bar {
+	padding-bottom: 0px;
+}
+
+.items-bar h3 {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.items-list {
+	padding-top: 25px;
+}
+
+.items-list p {
+	font-size: 1.2em;
+}
+
+.items-list li {
+
+}
+
+.items-list .thumbnail{
+	margin-bottom: 0;
+	height: 300px;
+	width: 100%;
+}
 
 </style>
