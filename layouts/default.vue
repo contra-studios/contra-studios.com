@@ -104,7 +104,7 @@
   }
 
   *[class*="-bar"] {
-    border-bottom: 1px solid #EBEBEB;
+    /*border-bottom: 1px solid #EBEBEB;*/
   }
 
 </style>
