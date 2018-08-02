@@ -18,7 +18,7 @@
     </header>
 
     <!-- <CaseStudy></CaseStudy> -->
-    <section class="caseStudyContainer">
+   <!--  <section class="caseStudyContainer">
       <div class="items-bar wrapper">
         <h3>Case Studies</h3>
       </div>
@@ -27,9 +27,9 @@
           <article-preview :post="post"></article-preview>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <ProcessHighlight></ProcessHighlight>
+<!--     <ProcessHighlight></ProcessHighlight> -->
     <AboutUs></AboutUs>
     <Footer></Footer>
 
