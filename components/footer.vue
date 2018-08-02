@@ -2,6 +2,9 @@
 	<section class="footer">
   	<div class="wrapper">
       <h4>Contra Studios</h4>
+      <!-- <a class="logoWrapper" href="/">
+        <img class="footerLogo" src="../assets/images/logo.svg">
+      </a> -->
       <ul class="footerList">
         <li><a href="/">About</a></li><span>&#124;</span>
         <li><a href="/">Menu</a></li><span>&#124;</span>
@@ -17,7 +20,7 @@
 
 
 <style>
-	
+
 .footer {
   left: 0;
   bottom: 0;
@@ -32,6 +35,17 @@
   font-size: 1.4em;
   padding-bottom: 35px;
 }
+
+/*
+.footer .logoWrapper{
+  float: left;
+  width: 40%;
+  display: inline-block;
+}
+
+.footerLogo {
+  width: 60%;
+}*/
 
 .footerList{
   list-style: none;
@@ -53,9 +67,12 @@
 
 .footerList a:link,
 .footerList a:visited {
+  font-family: 'Lato', sans-serif;
   color: white;
   text-transform: uppercase; 
   text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 10px;
 }
 
 

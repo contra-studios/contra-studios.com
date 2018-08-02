@@ -6,8 +6,8 @@
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
-          <h2>A design studio based out of New York, New York.</h2>
-          <p>We bring spaces, people, and events to life through custom design solutions and beautiful illustration. What will we create together?</p>
+          <h2>A&nbsp;design&nbsp;studio&nbsp;based out&nbsp;of&nbsp;New&nbsp;York,&nbsp;New&nbsp;York.</h2>
+          <p>We&nbsp;bring&nbsp;spaces,&nbsp;people,&nbsp;and&nbsp;events&nbsp;to&nbsp;life through&nbsp;custom&nbsp;design&nbsp;solutions&nbsp;and&nbsp;beautiful illustration.&nbsp;What&nbsp;will&nbsp;we&nbsp;create&nbsp;together?</p>
 
           <div class="homeButton">
             <a id ="valuesButton" href="/">Our Values</a>
@@ -78,6 +78,8 @@ export default {
 
 <style>
 
+
+
 .home.header {
   overflow: hidden;
   position: relative;
@@ -91,6 +93,9 @@ export default {
 .home .menu a:link,
 .home .menu a:visited {
   color: #2c2c2c;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 .home .page-bar {
@@ -104,13 +109,17 @@ export default {
 }
 
 .home .page-info h2 {
-  font-size: 2.5vw;
+  font-family: 'butlerultralight', serif;
+  font-size: 3.5vw;
   width: 50%;
+  line-height: 120%;
+  padding-bottom: 15px;
 }
 
 .home .page-info p {
-  color: #000; /*COLOR?*/
-  min-width: 37%;
+  color: #5D5652;
+  font-size: 1.3vw;
+  min-width: 45%;
 }
 
 .home .page-info .homeButton a{
@@ -125,15 +134,21 @@ export default {
 }
 
 .home .page-info .homeButton #valuesButton {
+  font-family: 'Lato', sans-serif;
   border-color: #BD8936;
   color: white;
   background-color: #BD8936;
   margin-right: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .home .page-info .homeButton #contactButton {
+  font-family: 'Lato', sans-serif;
   border-color: white;
   color: #BD8936;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .caseStudyContainer {

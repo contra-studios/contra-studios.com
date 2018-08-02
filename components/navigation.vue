@@ -13,7 +13,7 @@
       <li><a href="/">Our Process</a></li>
       <li><a href="/">Pricing</a></li>
       <li><a href="/">About Us</a></li>
-      <li><a id="contactButton" href="/blog">Get in Touch</a></li>
+      <li><a id="navContactButton" href="/blog">Get in Touch</a></li>
     </ul>
   </nav>
 </template>
@@ -62,13 +62,14 @@
     text-decoration: none;
   }
 
-  #contactButton {
+  #navContactButton {
     border: 1px solid;
     border-color: #BD8936;
     padding: 10px 20px;
     color: #BD8936;
-    font-weight: 1000;
+    font-weight: bold;
     box-shadow: 10px 5px 20px #D7D9D3;
+    font-size: 1em;
   }
 
 
