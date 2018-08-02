@@ -6,7 +6,7 @@
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
-          <h2>A design studio based out of New York, New York.</h2>
+          <h2>A&nbsp;design&nbsp;studio&nbsp;based out&nbsp;of&nbsp;New&nbsp;York,&nbsp;New&nbsp;York.</h2>
           <p>We bring spaces, people, and events to life through custom design solutions and beautiful illustration. What will we create together?</p>
 
           <div class="homeButton">
@@ -109,8 +109,11 @@ export default {
 }
 
 .home .page-info h2 {
+  font-family: 'butlerultralight', serif;
   font-size: 2.5vw;
   width: 50%;
+  line-height: 120%;
+  padding-bottom: 15px;
 }
 
 .home .page-info p {

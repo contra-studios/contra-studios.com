@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <link rel="stylesheet" href="../assets/fonts/Butler/stylesheet.css" type="text/css" charset="utf-8" /> 
     <main role="main">
       <nuxt/>
     </main>
@@ -25,6 +24,132 @@
     src: url("~/static/avenir-400.woff2") format("woff2");
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'butler_stencilblack';
+    src: url('~/static/Butler/butler_black_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_black_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+  @font-face {
+    font-family: 'butlerblack';
+    src: url('~/static/Butler/butler_black-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencilbold';
+    src: url('~/static/Butler/butler_bold_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_bold_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerbold';
+    src: url('~/static/Butler/butler_bold-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencilextrabold';
+    src: url('~/static/Butler/butler_extrabold_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_extrabold_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerextrabold';
+    src: url('~/static/Butler/butler_extrabold-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencillight';
+    src: url('~/static/Butler/butler_light_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_light_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerlight';
+    src: url('~/static/Butler/butler_light-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencilmedium';
+    src: url('~/static/Butler/butler_medium_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_medium_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlermedium';
+    src: url('~/static/Butler/butler_medium-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencilregular';
+    src: url('~/static/Butler/butler_regular_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_regular_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerregular';
+    src: url('~/static/Butler/butler_regular-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butler_stencilultralight';
+    src: url('~/static/Butler/butler_ultra_light_stencil-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_ultra_light_stencil-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'butlerultralight';
+    src: url('~/static/Butler/butler_ultra_light-webfont.woff2') format('woff2'),
+         url('~/static/Butler/butler_ultra_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
 
