@@ -27,6 +27,9 @@ const config = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Contra Studios' }
     ],
+    // css: [
+    //     { src: '~/assets/styles/slick.css', lang: 'css' }
+    // ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' }
@@ -42,6 +45,9 @@ const config = {
   ** Build configuration
   */
   build: {
+
+    // extractCSS: true
+
     /*
     ** Run ESLINT on save
     */
