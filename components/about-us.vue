@@ -34,7 +34,7 @@
   font-size: .7em;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 300;
 }
 	
 </style>

@@ -26,7 +26,7 @@
     font-display: swap;
   }
 
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
 
   body {
     background: #E1E7EA;
