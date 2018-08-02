@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <link rel="stylesheet" href="../assets/fonts/Butler/stylesheet.css" type="text/css" charset="utf-8" /> 
     <main role="main">
       <nuxt/>
     </main>
@@ -25,10 +26,13 @@
     font-display: swap;
   }
 
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+
   body {
     background: #E1E7EA;
     max-width: 1180px;
     margin: 0 auto;
+    /*font-family: 'Lato', sans-serif;*/
     font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.65;

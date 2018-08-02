@@ -78,6 +78,8 @@ export default {
 
 <style>
 
+
+
 .home.header {
   overflow: hidden;
   position: relative;
@@ -91,6 +93,9 @@ export default {
 .home .menu a:link,
 .home .menu a:visited {
   color: #2c2c2c;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 .home .page-bar {
@@ -125,15 +130,21 @@ export default {
 }
 
 .home .page-info .homeButton #valuesButton {
+  font-family: 'Lato', sans-serif;
   border-color: #BD8936;
   color: white;
   background-color: #BD8936;
   margin-right: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .home .page-info .homeButton #contactButton {
+  font-family: 'Lato', sans-serif;
   border-color: white;
   color: #BD8936;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .caseStudyContainer {
