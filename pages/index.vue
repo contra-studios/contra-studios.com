@@ -7,7 +7,7 @@
         </div>
         <div class="page-info wrapper">
           <h2>A&nbsp;design&nbsp;studio&nbsp;based out&nbsp;of&nbsp;New&nbsp;York,&nbsp;New&nbsp;York.</h2>
-          <p>We bring spaces, people, and events to life through custom design solutions and beautiful illustration. What will we create together?</p>
+          <p>We&nbsp;bring&nbsp;spaces,&nbsp;people,&nbsp;and&nbsp;events&nbsp;to&nbsp;life through&nbsp;custom&nbsp;design&nbsp;solutions&nbsp;and&nbsp;beautiful illustration.&nbsp;What&nbsp;will&nbsp;we&nbsp;create&nbsp;together?</p>
 
           <div class="homeButton">
             <a id ="valuesButton" href="/">Our Values</a>
@@ -110,15 +110,16 @@ export default {
 
 .home .page-info h2 {
   font-family: 'butlerultralight', serif;
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   width: 50%;
   line-height: 120%;
   padding-bottom: 15px;
 }
 
 .home .page-info p {
-  color: #000; /*COLOR?*/
-  min-width: 37%;
+  color: #5D5652;
+  font-size: 1.3vw;
+  min-width: 45%;
 }
 
 .home .page-info .homeButton a{
