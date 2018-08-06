@@ -69,6 +69,10 @@ const config = {
     ]
   },
 
+  modules: [
+   'bootstrap-vue/nuxt',
+  ],
+
   /*
   ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
   ** Make client available everywhere via Nuxt plugins
