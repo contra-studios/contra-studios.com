@@ -1,17 +1,25 @@
 <template>	
 
+
 	<section class="caseStudyContainer">
-<!-- 		<link rel="stylesheet" type="text/css" href="~/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="~/slick/slick-theme.css"/> -->
+<!-- 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/> -->
+
+		<link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <div class="items-bar wrapper">
       <h3>Case Studies</h3>
+      <br>
+      <br>
     </div>
 
-    <div>
+    <div class="wrapper">
     <b-carousel id="caseStudyCarousel"
                 style="text-shadow: 1px 1px 2px #333;"
                 controls
-                indicators=true
+                indicators
                 background="#ababab"
                 :interval="0"
                 img-width="1024"
@@ -23,8 +31,8 @@
     <ul class="caseStudyList">
     	<li class="caseStudyItem" v-for="caseStudy in cases">
     		<b-carousel-slide>
-    			<img slot="img" class="d-block img-fluid w-100" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=1024&h=480'">
-    			<h1>{{caseStudy.fields.title}}</h1>
+    			<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=1024&h=480'">
+    			<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
     			<p>{{caseStudy.fields.description}}</p>
     			<h4>Clients:<br>{{caseStudy.fields.client.fields.name}}</h4>
     			<h5>Team members:</h5>
@@ -84,60 +92,37 @@
 
     </b-carousel>
 
-<!--     <p class="mt-4">
+    <p class="mt-4">
       Slide #: {{ slide }}<br>
       Sliding: {{ sliding }}
-    </p> -->
+    </p>
 
   </div>
-
-<!--     <carousel>
-		  <slide>
-		  <div><img src="../designs/v1.jpg"></div>
-		  </slide>
-		  <slide>
-		    <div><img src="../designs/v1.jpg"></div>
-		  </slide>
-		  <slide>
-		    <div><img src="../designs/v1.jpg"></div>
-		  </slide>
-		</carousel>
- -->
 	  
+	<div class="wrapper">
+		<div class="slider-for">
+		  <div>1</div>
+		  <div>2</div>
+		  <div>3</div>
+		  <div><h1>HI!</h1></div>
+		</div>
 
-<!--     <div class="your-class">
-		  <div><img src="../designs/v1.jpg"></div>
-		  <div><img src="../designs/v1.jpg"></div>
-		  <div><img src="../designs/v1.jpg"></div>
-		</div> -->
+		<div class="slider-nav">
+			<div>1</div>
+		  <div>2</div>
+		  <div>3</div>
+		  <div><h1>HI!</h1></div>
+		</div>
 
-		<ul class="items-list wrapper">
-      <li class="item" v-for="caseStudy in cases">
-        <h1>{{caseStudy.fields.title}}</h1>
-        <p>{{caseStudy.fields.description}}</p>
-        <img class="thumbnail"
-      	:src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=350&h=196'"
-    		>
-        <h4>{{caseStudy.fields.client.fields.name}}</h4>
-        <ul>
-          <li v-for="teamMember in caseStudy.fields.teamMembers">
-            <h5>{{teamMember.fields.name}}</h5>
-          </li>
-        </ul>
-        <br>
-      </li>
-    </ul>
+	</div>
+
+
+   <script src="/js/script.js"></script>
    </section>
 
 </template>
 
-<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="~/slick/slick.min.js"></script>
 
-
-<script type="text/javascript" src="../assets/js/script.js">
-</script> -->
 
 <script>
 // import { Carousel, Slide } from 'vue-carousel'
@@ -191,6 +176,9 @@ export default {
 
 <style>
 
+.carouselImage {
+}
+
 
 .caseStudyContainer {
   background: #EBECE9;
@@ -219,6 +207,12 @@ export default {
 
 .caseStudyList{
 	margin-bottom: 0;
+}
+
+.slideTitle {
+/*	position: absolute;
+  left: auto;
+  top: -338px;*/
 }
 
 @media (min-width: 900px){

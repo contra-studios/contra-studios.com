@@ -27,9 +27,10 @@ const config = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Contra Studios' }
     ],
-    // css: [
-    //     { src: '~/assets/styles/slick.css', lang: 'css' }
-    // ],
+    css: [
+        { src: '~/static/slick/slick.css', lang: 'css' },
+        { src: '~/static/slick/slick-theme.css'}
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' }
