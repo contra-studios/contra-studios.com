@@ -10,7 +10,7 @@
           <p>We bring spaces, people, and events to life through custom design solutions and beautiful illustration. What will we create together?</p>
 
           <div class="homeButton">
-            <a id ="valuesButton" href="/">Our Values</a>
+            <a id="valuesButton" href="/">Our Values</a>
             <a id="contactButton" href="/">Get in Touch</a>
           </div>
         </div>
