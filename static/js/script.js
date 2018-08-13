@@ -1,46 +1,38 @@
+$(function() {
 $(document).ready(function () {
  $('.topSlider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  fade: true,
+  fade: false,
   asNavFor: '.bottomSlider',
   mobileFirst: true,
   speed: 1000
  });
 });
 
-$(document).ready(function () {
-$('.bottomSlider').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  asNavFor: '.topSlider',
-  dots: false,
-  centerMode: false,
-  focusOnSelect: true,
-  draggable: false,
-  mobileFirst: true,
-  speed: 1000
-});});
+  $(document).ready(function () {
+    $('.bottomSlider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.topSlider',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      draggable: false,
+      mobileFirst: true,
+      speed: 1000
+    });
+});
+
+  $('.topSlider').show();
+  $('.bottomSlider').show();
+});
 
 
-// $(document).ready(function () {
-//  $('.slider-for').slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   fade: true,
-//   asNavFor: '.slider-nav',
-//   draggable: false
-// });});
-
-// $(document).ready(function () {
-// $('.slider-nav').slick({
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   asNavFor: '.slider-for',
-//   dots: false,
-//   centerMode: false,
-//   focusOnSelect: true,
-//   draggable: false
-// });});
+$('.topSlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  // setTimeout(function(){
+  //       document.getElementById("topSlider").style.visibility = "hidden";},300);
+  // setTimeout(function(){
+  //       document.getElementById("topSlider").style.visibility = "visible";},800);
+});

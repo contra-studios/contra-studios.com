@@ -12,12 +12,11 @@
     <div class="items-bar wrapper">
       <h3>Case Studies</h3>
     </div>	  
-	<div class="wrapper">
-
-		<div class="topSlider">
-    	<div v-for="caseStudy in cases">
+		<div class="wrapper">
+			<div class="topSlider" id="topSlider">
+    		<div v-for="caseStudy in cases">
     			<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
-    			<p>{{caseStudy.fields.description}}</p>
+    			<p class="slideDescription">{{caseStudy.fields.description}}</p>
 <!--     			<h4>Clients:<br>{{caseStudy.fields.client.fields.name}}</h4>
     			<h5>Team members:</h5>
     			<ul>
@@ -25,26 +24,22 @@
 	            <h5>{{teamMember.fields.name}}</h5>
 	          </li>
 	        </ul> -->
-
-	       <div class="caseStudyButtons">
-					<a id="workButton" href="/">Work</a>
-					<a id="storyButton" href="/">Story</a>
+	   		</div>
+			</div>
+			<div class="caseStudyButtons">
+				<a id="workButton" href="/">Work</a>
+				<a id="storyButton" href="/">Story</a>
+			</div>
+			<br>
+			<div class="bottomSlider">
+				<div v-for="caseStudy in cases">
+					<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=222&h=200'">
 				</div>
-	    </div>
-		</div>
-
-		<br>
-
-		<div class="bottomSlider">
-			<div v-for="caseStudy in cases">
-				<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=222&h=200'">
 			</div>
 		</div>
-	</div>
 
-
-   <script src="/js/script.js"></script>
-   </section>
+		<script src="/js/script.js"></script>
+	</section>
 
 </template>
 
@@ -97,6 +92,20 @@ export default {
 
 <style>
 
+
+.topSlider, .bottomSlider {
+	display: none;
+}
+
+.topSlider {
+	width: 70%;
+}
+
+.slideTitle, .slideDescription {
+	white-space: nowrap;
+	width: 100%;
+}
+
 .bottomSlider img {
 	padding-right: 15px;
 	height: 200px;
@@ -110,19 +119,20 @@ export default {
 .wrapper .slick-next {
 	right: auto;
 	top: 38%;
-	margin-left: -10px;
+	margin-left: -15px;
 }
 
 .wrapper .slick-prev {
 	left: auto;
 	top: 62%;
 	z-index: 10;
-	margin-left: -10px;
+	margin-left: -15px;
 }
 
 .wrapper .slick-prev:before, .wrapper .slick-next:before {
 	opacity: 1;
 	font-size: 30px;
+	/*-webkit-font-smoothing: none;*/
 }
 
 .slick-slide:focus, .caseStudyButtons a { outline: none; }
@@ -130,7 +140,7 @@ export default {
 
 .caseStudyButtons #workButton {
 	color: #BD8936;
-	padding-right: 30px;
+	padding-right: 65px;
 }
 
 .caseStudyButtons #storyButton {
