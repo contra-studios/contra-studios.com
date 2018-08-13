@@ -120,6 +120,10 @@ export default {
 	right: auto;
 	top: 38%;
 	margin-left: -15px;
+	background: white;
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
 }
 
 .wrapper .slick-prev {
@@ -127,12 +131,38 @@ export default {
 	top: 62%;
 	z-index: 10;
 	margin-left: -15px;
+	background: white;
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
+}
+
+.wrapper .slick-next:before {
+	content: ">";
+	color: #BD8936;
+	background: transparent;
+	border-radius: 100%;
+	line-height: 0;
+}
+
+.wrapper .slick-prev:before {
+	content: "<";
+	color: #BD8936;
+	background: transparent;
+	border-radius: 100%;
+	line-height: 0;
+}
+
+.wrapper .slick-prev:hover,
+.wrapper .slick-next:hover,
+.wrapper .slick-prev:focus,
+.wrapper .slick-next:focus {
+	background: white;
 }
 
 .wrapper .slick-prev:before, .wrapper .slick-next:before {
 	opacity: 1;
-	font-size: 30px;
-	/*-webkit-font-smoothing: none;*/
+	font-size: 20px;
 }
 
 .slick-slide:focus, .caseStudyButtons a { outline: none; }
