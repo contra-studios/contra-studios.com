@@ -4,7 +4,7 @@ $(document).ready(function () {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  fade: false,
+  fade: true,
   asNavFor: '.bottomSlider',
   mobileFirst: true,
   speed: 1000

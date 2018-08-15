@@ -14,9 +14,9 @@
     </div>	  
 		<div class="wrapper">
 			<div class="topSlider" id="topSlider">
-    		<div v-for="caseStudy in cases">
-    			<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
-    			<p class="slideDescription">{{caseStudy.fields.description}}</p>
+    			<div v-for="caseStudy in cases">
+    				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
+    				<p class="slideDescription">{{caseStudy.fields.description}}</p>
 <!--     			<h4>Clients:<br>{{caseStudy.fields.client.fields.name}}</h4>
     			<h5>Team members:</h5>
     			<ul>
@@ -24,12 +24,21 @@
 	            <h5>{{teamMember.fields.name}}</h5>
 	          </li>
 	        </ul> -->
-	   		</div>
+
+	        		<div class="caseStudyButtons">
+						<a id="workButton" href="/">Work</a>
+						<!-- <a id="storyButton" href="/">Story</a> -->
+						<a id="storyButton"><nuxt-link :to="{ name: 'case-study-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link></a>
+					</div>
+
+
+	   			</div>
 			</div>
-			<div class="caseStudyButtons">
+			<!-- <div class="caseStudyButtons">
 				<a id="workButton" href="/">Work</a>
 				<a id="storyButton" href="/">Story</a>
-			</div>
+				<a><nuxt-link :to="{ name: 'blog-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link></a>
+			</div> -->
 			<br>
 			<div class="bottomSlider">
 				<div v-for="caseStudy in cases">
@@ -165,7 +174,7 @@ export default {
 	font-size: 20px;
 }
 
-.slick-slide:focus, .caseStudyButtons a { outline: none; }
+.slick-slide:focus, .caseStudyButtons a, .caseStudyButtons a nuxt-link  { outline: none; } /*Hides slick outline feature*/
 
 
 .caseStudyButtons #workButton {
@@ -175,19 +184,25 @@ export default {
 
 .caseStudyButtons #storyButton {
 	color: #D7D9D3;
+	font-size: 1em;
 }
 
-.caseStudyButtons a{
+.caseStudyButtons a {
+	color: #D7D9D3;
+}
+
+.caseStudyButtons a,
+.caseStudyButtons a nuxt-link {
 	padding-bottom: 0px;
-  font-weight: 1000;
-  text-transform: uppercase;
-  display: inline-block;
-  text-decoration: none;
-  font-size: .7em;
+ 	font-weight: 1000;
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none;
+	font-size: .7em;
 }
 
 .caseStudyContainer {
-  background: #EBECE9;
+  	background: #EBECE9;
 }
 
 .items-bar {
