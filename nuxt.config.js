@@ -126,7 +126,8 @@ const config = {
       .then(([entries, postType]) => {
         return [
           // map entries to URLs
-          ...entries.items.map(entry => `/case-study/${entry.fields.slug}`),
+          ...entries.items.map(entry => `/case-study/work/${entry.fields.slug}`),
+          ...entries.items.map(entry => `case-study/story/${entry.fields.slug}`),
         ]
       })
     }

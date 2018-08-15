@@ -7,7 +7,7 @@
         </div>
       </div>
       <div>
-        Case Study Slug Page: {{caseStudy.fields.title}}
+        Case Study Story Page: {{caseStudy.fields.title}}
         <!-- <img
           :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
           :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=87&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=250&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=500&fit=fill 2000w`"

@@ -13,7 +13,7 @@
       <h3>Case Studies</h3>
     </div>	  
 		<div class="wrapper">
-			<div class="topSlider" id="topSlider">
+			<div class="topSlider slider" id="topSlider">
     			<div v-for="caseStudy in cases">
     				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
     				<p class="slideDescription">{{caseStudy.fields.description}}</p>
@@ -24,23 +24,17 @@
 	            <h5>{{teamMember.fields.name}}</h5>
 	          </li>
 	        </ul> -->
-
-	        		<div class="caseStudyButtons">
-						<a id="workButton" href="/">Work</a>
-						<!-- <a id="storyButton" href="/">Story</a> -->
-						<a id="storyButton"><nuxt-link :to="{ name: 'case-study-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link></a>
-					</div>
-
-
 	   			</div>
 			</div>
-			<!-- <div class="caseStudyButtons">
-				<a id="workButton" href="/">Work</a>
-				<a id="storyButton" href="/">Story</a>
-				<a><nuxt-link :to="{ name: 'blog-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link></a>
-			</div> -->
-			<br>
-			<div class="bottomSlider">
+
+			<div class="buttonSlider slider" id="buttonSlider">
+				<div v-for="caseStudy in cases" class="caseStudyButtons">
+					<nuxt-link id ="workButton" :to="{ name: 'case-study-work-slug', params: { slug: caseStudy.fields.slug }}">Work</nuxt-link>
+					<nuxt-link id ="storyButton" :to="{ name: 'case-study-story-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link>
+				</div>
+			</div>
+				
+			<div class="bottomSlider slider">
 				<div v-for="caseStudy in cases">
 					<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=222&h=200'">
 				</div>
@@ -102,12 +96,12 @@ export default {
 <style>
 
 
-.topSlider, .bottomSlider {
+.topSlider, .bottomSlider, .buttonSlider {
 	display: none;
 }
 
 .topSlider {
-	width: 70%;
+	/*width: 70%;*/
 }
 
 .slideTitle, .slideDescription {
@@ -184,7 +178,6 @@ export default {
 
 .caseStudyButtons #storyButton {
 	color: #D7D9D3;
-	font-size: 1em;
 }
 
 .caseStudyButtons a {
@@ -226,8 +219,8 @@ export default {
 
 }
 
-.caseStudyList{
-	margin-bottom: 0;
+.caseStudyButtons{
+	margin-bottom: 1rem;
 }
 
 
