@@ -2,11 +2,9 @@
 
 
 	<section class="caseStudyContainer">
-<!-- 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/> -->
-
 		<link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/animate.css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <div class="items-bar wrapper">
@@ -14,16 +12,9 @@
     </div>	  
 		<div class="wrapper">
 			<div class="topSlider slider" id="topSlider">
-    			<div v-for="caseStudy in cases">
+    			<div class="topAnimation animated" v-for="caseStudy in cases">
     				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
     				<p class="slideDescription">{{caseStudy.fields.description}}</p>
-<!--     			<h4>Clients:<br>{{caseStudy.fields.client.fields.name}}</h4>
-    			<h5>Team members:</h5>
-    			<ul>
-	          <li v-for="teamMember in caseStudy.fields.teamMembers">
-	            <h5>{{teamMember.fields.name}}</h5>
-	          </li>
-	        </ul> -->
 	   			</div>
 			</div>
 
@@ -102,6 +93,30 @@ export default {
 
 .topSlider {
 	/*width: 70%;*/
+}
+
+.topAnimation {
+	/*opacity: 1;*/
+}
+
+.slideOutLeft,
+.slideInRight {
+  animation-duration: 1s;
+}
+
+.topAnimationIn {
+	animation-name: title-slide-in;
+	animation-duration: 2s;
+}
+
+.topAnimationOut {
+	animation-name: title-slide-out;
+	animation-duration: 1s;
+}
+
+.keepSlideInvisible {
+	animation-name: keep-invisible;
+	animation-duration: 5s;
 }
 
 .slideTitle, .slideDescription {
@@ -227,6 +242,34 @@ export default {
 @media (min-width: 900px){
  .caseStudyItem {
 		width: 100%;
+	}
+}
+
+/* Keyframes */
+@keyframes title-slide-in {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes title-slide-out {
+	0%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes keep-invisible {
+	
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
