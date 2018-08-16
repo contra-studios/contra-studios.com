@@ -1,11 +1,15 @@
 <template>
   <div>
+
     <header class="home header">
       <div class="foreground">
         <div class="page-bar wrapper">
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
+          <video autoplay muted loop id="background-video" class="background-video">
+            <source src="~/static/assets/videos/background-video.mp4" type="video/mp4">
+          </video>
           <h2>A&nbsp;design&nbsp;studio&nbsp;based out&nbsp;of&nbsp;New&nbsp;York,&nbsp;New&nbsp;York.</h2>
           <p>We&nbsp;bring&nbsp;spaces,&nbsp;people,&nbsp;and&nbsp;events&nbsp;to&nbsp;life through&nbsp;custom&nbsp;design&nbsp;solutions&nbsp;and&nbsp;beautiful illustration.&nbsp;What&nbsp;will&nbsp;we&nbsp;create&nbsp;together?</p>
 
@@ -78,14 +82,21 @@ export default {
 
 <style>
 
-
+.background-video { /* class name used in javascript too */
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  /*min-height: 100%;*/
+  /*min-width: 100%;*/
+  z-index: -1;
+}
 
 .home.header {
   overflow: hidden;
   position: relative;
   height: 70vw;
-  min-height: 400px;
-  max-height: 510px;
+  min-height: fit-content;
+  max-height: max-content;
   background: #fff;
   color: #2c2c2c;
 }
@@ -106,6 +117,7 @@ export default {
 
 .home .page-info {
   padding-top: 7%;
+  overflow: hidden;
 }
 
 .home .page-info h2 {
@@ -149,6 +161,7 @@ export default {
   color: #BD8936;
   font-weight: bold;
   letter-spacing: 1px;
+  background-color: white;
 }
 
 .caseStudyContainer {
