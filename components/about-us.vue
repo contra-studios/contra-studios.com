@@ -25,7 +25,6 @@
   color: white;
   background-color: #BD8936;
   margin-right: 25px;
-  border: 1px solid;
   padding: 10px 20px;
   box-shadow: 10px 5px 20px #D7D9D3;
   text-transform: uppercase;
@@ -34,7 +33,7 @@
   font-size: .7em;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: bold;
 }
 	
 </style>
