@@ -86,17 +86,26 @@ export default {
 
 <style>
 
+.topSlider .slick-slide {
+	opacity: 0;
+	transition: opacity 2s ease-out;
+}
+
+ .topSlider .slick-active {
+	opacity: 1 !important;
+	transition: opacity 2s ease-in;
+}
+
+.topSlider .slick-cloned {
+	opacity: 0.1;
+}
 
 .topSlider, .bottomSlider, .buttonSlider {
 	display: none;
 }
 
-.topSlider {
-	/*width: 70%;*/
-}
-
-.topAnimation {
-	/*opacity: 1;*/
+/*.invisible {
+	opacity: 0;
 }
 
 .slideOutLeft,
@@ -117,7 +126,7 @@ export default {
 .keepSlideInvisible {
 	animation-name: keep-invisible;
 	animation-duration: 5s;
-}
+}*/
 
 .slideTitle, .slideDescription {
 	white-space: nowrap;
@@ -132,6 +141,7 @@ export default {
 
 .bottomSlider {
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .wrapper .slick-next {
@@ -246,9 +256,12 @@ export default {
 }
 
 /* Keyframes */
-@keyframes title-slide-in {
+/*@keyframes title-slide-in {
 	0%{
 		opacity: 0;
+	}
+	50%{
+		opacity: .3;
 	}
 	100% {
 		opacity: 1;
@@ -261,6 +274,7 @@ export default {
 	100% {
 		opacity: 0;
 	}
+
 }
 
 @keyframes keep-invisible {
@@ -271,6 +285,6 @@ export default {
 	100% {
 		opacity: 0;
 	}
-}
+}*/
 
 </style>

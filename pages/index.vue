@@ -18,32 +18,6 @@
     </header>
 
     <CaseStudy v-bind:cases="cases"></CaseStudy>
-    <br> <!-- Added to show separation while building -->
-    <section class="caseStudyContainer">
-      <div class="items-bar wrapper">
-        <h3>Case Studies</h3>
-      </div>
-      <ul class="items-list wrapper">
-        <li class="item" v-for="post in posts">
-          <article-preview :post="post"></article-preview>
-        </li>
-      </ul>
-
-<!--     <ul class="items-list wrapper">
-      <li v-for="caseStudy in cases">
-        <h4>{{caseStudy.fields.title}}</h4>
-        <h5>{{caseStudy.fields.client.fields.name}}</h5>
-        <ul>
-          <li v-for="teamMember in caseStudy.fields.teamMembers">
-            <h5>{{teamMember.fields.name}}</h5>
-          </li>
-        </ul>
-        <br>
-      </li>
-    </ul> -->
-
-
-    </section>
 
     <ProcessHighlight></ProcessHighlight>
     <AboutUs></AboutUs>
