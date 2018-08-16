@@ -70,9 +70,9 @@ const config = {
     ]
   },
 
-  modules: [
-   'bootstrap-vue/nuxt',
-  ],
+  // modules: [
+  //  'bootstrap-vue/nuxt',
+  // ],
 
   /*
   ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES

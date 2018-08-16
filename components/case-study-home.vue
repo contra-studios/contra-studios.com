@@ -4,30 +4,30 @@
 	<section class="caseStudyContainer">
 		<link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
-		<link rel="stylesheet" type="text/css" href="/css/animate.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/css/animate.css"> -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <div class="items-bar wrapper">
       <h3>Case Studies</h3>
     </div>	  
-		<div class="wrapper">
+		<div class="wrapper sliderContainer">
 			<div class="topSlider slider" id="topSlider">
-    			<div class="topAnimation animated" v-for="caseStudy in cases">
+    			<div class="topAnimation case-slide" v-for="caseStudy in cases">
     				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
     				<p class="slideDescription">{{caseStudy.fields.description}}</p>
 	   			</div>
 			</div>
 
 			<div class="buttonSlider slider" id="buttonSlider">
-				<div v-for="caseStudy in cases" class="caseStudyButtons">
+				<div v-for="caseStudy in cases" class="caseStudyButtons case-slide">
 					<nuxt-link id ="workButton" :to="{ name: 'case-study-work-slug', params: { slug: caseStudy.fields.slug }}">Work</nuxt-link>
 					<nuxt-link id ="storyButton" :to="{ name: 'case-study-story-slug', params: { slug: caseStudy.fields.slug }}">Story</nuxt-link>
 				</div>
 			</div>
 				
-			<div class="bottomSlider slider">
+			<div class="bottomSlider slider case-slide">
 				<div v-for="caseStudy in cases">
-					<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url + '?fit=scale&w=222&h=200'">
+					<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url">
 				</div>
 			</div>
 		</div>
@@ -41,20 +41,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      slide: 0,
-      sliding: null
-    }
-  },
-  methods: {
-    onSlideStart (slide) {
-      this.sliding = true
-    },
-    onSlideEnd (slide) {
-      this.sliding = false
-    }
-  },
   props: ['cases']}
 </script>
 
@@ -100,8 +86,22 @@ export default {
 	opacity: 0.1;
 }
 
-.topSlider, .bottomSlider, .buttonSlider {
-	display: none;
+/*.topSlider, .bottomSlider, .buttonSlider {
+	overflow: hidden;
+}*/
+
+.caseStudyContainer {
+    animation-name: case-study-fade;
+    animation-duration: 1s;
+}
+
+.case-slide:nth-child(n+1) {
+    display: none;
+}
+
+.slick-initialized,
+.case-slide:first-child { 
+    display: block;
 }
 
 /*.invisible {
@@ -256,6 +256,14 @@ export default {
 }
 
 /* Keyframes */
+@keyframes case-study-fade{ 
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+ }
 /*@keyframes title-slide-in {
 	0%{
 		opacity: 0;
