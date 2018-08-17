@@ -1,54 +1,62 @@
 <template>
   <div class="container">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <h1 class="title">
-      Contact
+      Contact Us!
     </h1>
-    <div class="content">
-      <form name="contact" action="" method="post">
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden">     
-          <label>Don’t fill this out: <input name="bot-field"></label>  <!-- Added to keep track if bots are sending messages -->
-        </p>
-        <label class="form-label" for="name">
-          Name:
-        </label>
-        <input class="form-field" name="name" id="name" />
-        <label class="form-label" for="email">
-          Email:
-        </label>
-        <input class="form-field" name="email" id="email" />
-        <label class="form-label" for="message">
-          Message:
-        </label>
-        <textarea class="form-field" name="message" id="message"></textarea><br>
-        <input class="form-button" type="submit" value="Send message" />
-      </form>
-    </div>
+
+    <form action="https://getsimpleform.com/messages?form_api_token=8a440de16160d2c0b6180438fadb71b5" method="post" class="contactForm">
+      <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+      <input type='hidden' name='redirect_to' value='http://contra-studios.com/contact/confirm' />
+      <!-- all your input fields here.... -->
+      <h5 class="form-label">Name:</h5>
+      <input type='text' name='name' class="form-field" />
+      <h5 class="form-label">Email:</h5>
+      <input type='text' name='email' class="form-field" />
+      <h5 class="form-label">Message:</h5>
+      <textarea type="textarea" name="message" class="form-message"></textarea>
+      <br>
+      <input type='submit' value='Submit' class="form-button" />
+    </form>
+
+
+    <script src="/js/contact.js"></script>
   </div>
 </template>
 
 
+
 <style>
 
-  .content, .title {
+  .content, .title, .contactForm h5{
     font-family: 'butlerlight', serif;
   }
 
-
-
   .form-label {
-    width: 100%;
-    float: left;
+    
   }
+
   .form-field {
-    min-width: 100%;
+    min-width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #5D5652;
+    border-radius: 4px;
+  }
+
+  .form-message{
+    min-width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #5D5652;
+    border-radius: 4px;
+    overflow: scroll;
   }
 
   .form-button {
     
   }
 
-  .hidden {
-  display: none;
-}
 </style>
