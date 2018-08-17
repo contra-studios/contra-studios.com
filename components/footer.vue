@@ -6,11 +6,11 @@
         <img class="footerLogo" src="../assets/images/logo.svg">
       </a> -->
       <ul class="footerList">
-        <li><a href="/">About</a></li><span>&#124;</span>
-        <li><a href="/">Menu</a></li><span>&#124;</span>
-        <li><a href="/">Reservation</a></li><span>&#124;</span>
-        <li><a href="/">Functions</a></li><span>&#124;</span>
-        <li><a href="/">Contact</a></li>
+        <li><a href="/work">Work</a></li><span>&#124;</span>
+        <li><a href="/process">Our Process</a></li><span>&#124;</span>
+        <li><a href="/pricing">Pricing</a></li><span>&#124;</span>
+        <li><a href="/about">About Us</a></li><span>&#124;</span>
+        <li><a href="/contact">Get In Touch</a></li>
       </ul>
     </div>
   </section>

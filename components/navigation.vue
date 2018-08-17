@@ -2,18 +2,16 @@
 
 
   <nav role="navigation" class="top-nav">
-    
-
     <ul class="menu">
       <a class="logoWrapper" href="/">
         <img class="siteLogo" src="../assets/images/logo.svg">
       </a>
 
-      <li><a href="/">Work</a></li>
-      <li><a href="/">Our Process</a></li>
-      <li><a href="/">Pricing</a></li>
-      <li><a href="/">About Us</a></li>
-      <li><a id="navContactButton" href="/blog">Get in Touch</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/process">Our Process</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a id="navContactButton" href="/contact">Get in Touch</a></li>
     </ul>
   </nav>
 </template>

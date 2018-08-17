@@ -10,8 +10,8 @@
           <p>We&nbsp;bring&nbsp;spaces,&nbsp;people,&nbsp;and&nbsp;events&nbsp;to&nbsp;life through&nbsp;custom&nbsp;design&nbsp;solutions&nbsp;and&nbsp;beautiful illustration.&nbsp;What&nbsp;will&nbsp;we&nbsp;create&nbsp;together?</p>
 
           <div class="homeButton">
-            <a id ="valuesButton" href="/">Our Values</a>
-            <a id="contactButton" href="/">Get in Touch</a>
+            <a id ="valuesButton" href="/values">Our Values</a>
+            <a id="contactButton" href="/contact">Get in Touch</a>
           </div>
         </div>
       </div>
@@ -44,7 +44,6 @@ import CaseStudy from '~/components/case-study-home.vue'
 import ProcessHighlight from '~/components/process-highlight.vue'
 import AboutUs from '~/components/about-us.vue'
 import Footer from '~/components/footer.vue'
-import ArticlePreview from '~/components/article-preview.vue'
 
 const client = createClient()
 
@@ -70,8 +69,7 @@ export default {
     CaseStudy,
     ProcessHighlight,
     AboutUs,
-    Footer,
-    ArticlePreview
+    Footer
   }
 }
 </script>
