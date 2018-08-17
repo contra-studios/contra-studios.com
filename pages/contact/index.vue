@@ -9,7 +9,7 @@
     </header>
 
     <div class="body wrapper">
-        <h1>Get In Touch Page</h1>
+        <Contact></Contact>
     </div>
 
     <Footer></Footer>
@@ -21,11 +21,13 @@
 <script>
 import Navigation from '~/components/navigation.vue'
 import Footer from '~/components/footer.vue'
+import Contact from '~/components/contact.vue'
 
 export default {
   components: {
     Navigation,
-    Footer
+    Footer,
+    Contact
   }
 }
 </script>
