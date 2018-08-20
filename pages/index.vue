@@ -1,5 +1,6 @@
 <template>
   <div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <header class="home header">
       <div class="foreground">
         <div class="page-bar wrapper">
@@ -17,7 +18,13 @@
       </div>
     </header>
 
-    <CaseStudy v-bind:cases="cases"></CaseStudy>
+    <div class="caseStudyContainer">
+      <div class="wrapper sliderContainer">
+        <h3>Case Studies</h3>
+        <no-ssr><CaseStudy v-bind:cases="cases"></CaseStudy></no-ssr>
+      </div>
+    </div>
+    
 
     <ProcessHighlight></ProcessHighlight>
     <AboutUs></AboutUs>
@@ -35,6 +42,7 @@ import ProcessHighlight from '~/components/process-highlight.vue'
 import AboutUs from '~/components/about-us.vue'
 import Footer from '~/components/footer.vue'
 import ArticlePreview from '~/components/article-preview.vue'
+import NoSSR from 'vue-no-ssr'
 
 const client = createClient()
 
@@ -66,7 +74,8 @@ export default {
     ProcessHighlight,
     AboutUs,
     Footer,
-    ArticlePreview
+    ArticlePreview,
+    'no-ssr': NoSSR
   }
 }
 </script>
@@ -133,6 +142,9 @@ export default {
 
 .caseStudyContainer {
   background: #EBECE9;
+  animation-name: case-study-fade;
+  animation-duration: 4s;
+  /*animation-timing-function: ease;*/
 }
 
 .items-bar h3 {
@@ -167,6 +179,17 @@ export default {
     max-width: 250px;
   }
 }
+
+
+/* Keyframes */
+@keyframes case-study-fade{ 
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+ }
 
 
 </style>

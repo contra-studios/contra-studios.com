@@ -4,8 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>  
-		<div class="wrapper sliderContainer">
-			<h3>Case Studies</h3>
+		<!-- <div class="wrapper sliderContainer"> -->
 			<div class="topSlider slider" id="topSlider">
     			<div class="case-slide" v-for="caseStudy in cases">
     				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
@@ -21,11 +20,11 @@
 			</div>
 				
 			<div class="bottomSlider slider">
-				<div v-for="caseStudy in cases">
+				<div v-for="caseStudy in cases" class="case-slide">
 					<nuxt-link id ="workButton" :to="{ name: 'case-study-work-slug', params: { slug: caseStudy.fields.slug }}"><img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url"></nuxt-link>
 				</div>
 			</div>
-		</div>
+		<!-- </div> -->
 
 		<script src="/js/script.js"></script>
 	</div>
@@ -80,14 +79,21 @@ export default {
 	opacity: 0.1;
 }
 
+.bottomSlider {
+    visibility: hidden;
+}
+.bottomSlider.slick-initialized {
+    visibility: visible;
+}
+
 /*.topSlider, .bottomSlider, .buttonSlider {
 	overflow: hidden;
 }*/
 
-.caseStudyContainer {
+/*.caseStudyContainer {
     animation-name: case-study-fade;
-    animation-duration: 1s;
-}
+    animation-duration: 5s;
+}*/
 
 .case-slide:nth-child(n+1) {
     display: none;
@@ -223,14 +229,14 @@ export default {
 }
 
 /* Keyframes */
-@keyframes case-study-fade{ 
+/*@keyframes case-study-fade{ 
 	0%{
 		opacity: 0;
 	}
 	100%{
 		opacity: 1;
 	}
- }
+ }*/
 /*@keyframes title-slide-in {
 	0%{
 		opacity: 0;

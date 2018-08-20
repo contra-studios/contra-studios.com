@@ -1,5 +1,5 @@
-function createSlick() {
-  $('.topSlider').slick({
+$(document).ready(function () {
+   $('.topSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -11,7 +11,6 @@ function createSlick() {
     draggable: false,
     lazyLoad: 'progressive'
    });
-
 
   $('.buttonSlider').slick({
     slidesToShow: 1,
@@ -35,12 +34,10 @@ function createSlick() {
       speed: 1000,
       lazyLoad: 'progressive'
   });
-}
 
-createSlick();
-
-$(window).on( 'resize', createSlick );
-
-  
+  $('.topSlider').show();
+  $('.buttonSlider').show();
+  $('.bottomSlider').show();
+});
 
 
