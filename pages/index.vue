@@ -31,6 +31,9 @@
 
 <!--     <ProcessHighlight></ProcessHighlight> -->
     <!-- <AboutUs></AboutUs> -->
+    <div class="body wrapper">
+        <Contact></Contact>
+    </div>
     <Footer></Footer>
 
   </div>
@@ -43,6 +46,7 @@ import Navigation from '~/components/navigation.vue'
 import CaseStudy from '~/components/case-study-home.vue'
 import ProcessHighlight from '~/components/process-highlight.vue'
 import AboutUs from '~/components/about-us.vue'
+import Contact from '~/components/contact.vue'
 import Footer from '~/components/footer.vue'
 
 const client = createClient()
@@ -69,7 +73,8 @@ export default {
     CaseStudy,
     ProcessHighlight,
     AboutUs,
-    Footer
+    Footer,
+    Contact
   }
 }
 </script>
