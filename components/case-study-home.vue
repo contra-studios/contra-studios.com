@@ -6,13 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
 		<!-- <link rel="stylesheet" type="text/css" href="/css/animate.css"> -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-    <div class="items-bar wrapper">
-      <h3>Case Studies</h3>
-    </div>	  
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>  
 		<div class="wrapper sliderContainer">
+			<h3>Case Studies</h3>
 			<div class="topSlider slider" id="topSlider">
-    			<div class="topAnimation case-slide" v-for="caseStudy in cases">
+    			<div class="case-slide" v-for="caseStudy in cases">
     				<h1 class="slideTitle">{{caseStudy.fields.title}}</h1>
     				<p class="slideDescription">{{caseStudy.fields.description}}</p>
 	   			</div>
@@ -74,7 +72,7 @@ export default {
 
 .topSlider .slick-slide {
 	opacity: 0;
-	transition: opacity 2s ease-out;
+	transition: opacity 1s ease-out;
 }
 
  .topSlider .slick-active {
@@ -103,30 +101,6 @@ export default {
 .case-slide:first-child { 
     display: block;
 }
-
-/*.invisible {
-	opacity: 0;
-}
-
-.slideOutLeft,
-.slideInRight {
-  animation-duration: 1s;
-}
-
-.topAnimationIn {
-	animation-name: title-slide-in;
-	animation-duration: 2s;
-}
-
-.topAnimationOut {
-	animation-name: title-slide-out;
-	animation-duration: 1s;
-}
-
-.keepSlideInvisible {
-	animation-name: keep-invisible;
-	animation-duration: 5s;
-}*/
 
 .slideTitle, .slideDescription {
 	white-space: nowrap;
@@ -240,9 +214,6 @@ export default {
 	font-size: 1.2em;
 }
 
-.items-list li {
-
-}
 
 .caseStudyButtons{
 	margin-bottom: 1rem;
