@@ -1,10 +1,5 @@
-$(function() {
-
-  var slides = $('.topAnimation');
-  
-
-  $(document).ready(function () {
-   $('.topSlider').slick({
+function createSlick() {
+  $('.topSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -16,14 +11,9 @@ $(function() {
     draggable: false,
     lazyLoad: 'progressive'
    });
-  });
-  
-  // $('.topSlider').slick().on('afterChange', function(event, slick, currentSlide) {
-  //   slides.removeClass('topAnimationIn topAnimationOut')
-  // });
 
-  $(document).ready(function () {
-   $('.buttonSlider').slick({
+
+  $('.buttonSlider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -32,10 +22,8 @@ $(function() {
     mobileFirst: true,
     speed: 1000
    });
-  });
 
-  $(document).ready(function () {
-    $('.bottomSlider').slick({
+  $('.bottomSlider').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       asNavFor: '.slider',
@@ -46,12 +34,13 @@ $(function() {
       mobileFirst: true,
       speed: 1000,
       lazyLoad: 'progressive'
-    });
-});
+  });
+}
 
-  $('.topSlider').show();
-  $('.buttonSlider').show();
-  $('.bottomSlider').show();
-});
+createSlick();
+
+$(window).on( 'resize', createSlick );
+
+  
 
 

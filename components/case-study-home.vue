@@ -1,10 +1,7 @@
 <template>	
-
-
-	<section class="caseStudyContainer">
+	<div class="caseStudyContainer">
 		<link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
-		<!-- <link rel="stylesheet" type="text/css" href="/css/animate.css"> -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>  
 		<div class="wrapper sliderContainer">
@@ -23,16 +20,15 @@
 				</div>
 			</div>
 				
-			<div class="bottomSlider slider case-slide">
+			<div class="bottomSlider slider">
 				<div v-for="caseStudy in cases">
-					<img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url">
+					<nuxt-link id ="workButton" :to="{ name: 'case-study-work-slug', params: { slug: caseStudy.fields.slug }}"><img slot="img" class="carouselImage" :src="caseStudy.fields.previewPicture.fields.file.url"></nuxt-link>
 				</div>
 			</div>
 		</div>
 
 		<script src="/js/script.js"></script>
-	</section>
-
+	</div>
 </template>
 
 
